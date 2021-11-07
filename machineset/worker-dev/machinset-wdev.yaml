@@ -1,0 +1,51 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  annotations:
+    machine.openshift.io/memoryMb: "16384"
+    machine.openshift.io/vCPU: "4"
+  generation: 2
+  labels:
+    machine.openshift.io/cluster-api-cluster: laraujo-CLUSTER_ID
+  name: laraujo-CLUSTER_ID-infra
+  namespace: openshift-machine-api
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      machine.openshift.io/cluster-api-cluster: laraujo-CLUSTER_ID
+      machine.openshift.io/cluster-api-machineset: laraujo-CLUSTER_ID-wdev
+  template:
+    metadata:
+      labels:
+        machine.openshift.io/cluster-api-cluster: laraujo-CLUSTER_ID
+        machine.openshift.io/cluster-api-machine-role: wdev
+        machine.openshift.io/cluster-api-machine-type: wdev
+        machine.openshift.io/cluster-api-machineset: laraujo-CLUSTER_ID-wdev
+    spec:
+      metadata: {}
+      providerSpec:
+        value:
+          apiVersion: vsphereprovider.openshift.io/v1beta1
+          credentialsSecret:
+            name: vsphere-cloud-credentials
+          diskGiB: 60
+          kind: VSphereMachineProviderSpec
+          memoryMiB: 16384
+          metadata:
+            creationTimestamp: null
+          network:
+            devices:
+            - networkName: VM Network
+          numCPUs: 4
+          numCoresPerSocket: 2
+          snapshot: ""
+          template: laraujo-4p8m9-rhcos
+          userDataSecret:
+            name: worker-user-data
+          workspace:
+            datacenter: Datacenter
+            datastore: datastore1
+            folder: /Datacenter/vm/Plataformas/Cloud/laraujo/OCP49
+            resourcePool: /Datacenter/host/cluster/Resources
+            server: vcsa.rhbr-lab.com
