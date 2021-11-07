@@ -4,7 +4,7 @@ metadata:
   annotations:
     machine.openshift.io/memoryMb: "16384"
     machine.openshift.io/vCPU: "4"
-  generation: 1
+  generation: 2
   labels:
     machine.openshift.io/cluster-api-cluster: laraujo-{{ CLUSTER_ID }}
   name: laraujo-{{ CLUSTER_ID }}-{{ ROLE_NAME }}
