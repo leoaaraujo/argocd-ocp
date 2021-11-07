@@ -6,22 +6,22 @@ metadata:
     machine.openshift.io/vCPU: "4"
   generation: 2
   labels:
-    machine.openshift.io/cluster-api-cluster: laraujo-$clusterid
-  name: laraujo-$clusterid-infra
+    machine.openshift.io/cluster-api-cluster: laraujo-clusterid
+  name: laraujo-clusterid-infra
   namespace: openshift-machine-api
 spec:
   replicas: 0
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: laraujo-$clusterid
-      machine.openshift.io/cluster-api-machineset: laraujo-$clusterid-wdev
+      machine.openshift.io/cluster-api-cluster: laraujo-clusterid
+      machine.openshift.io/cluster-api-machineset: laraujo-clusterid-wdev
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: laraujo-$clusterid
+        machine.openshift.io/cluster-api-cluster: laraujo-clusterid
         machine.openshift.io/cluster-api-machine-role: wdev
         machine.openshift.io/cluster-api-machine-type: wdev
-        machine.openshift.io/cluster-api-machineset: laraujo-$clusterid-wdev
+        machine.openshift.io/cluster-api-machineset: laraujo-clusterid-wdev
     spec:
       metadata: {}
       providerSpec:
