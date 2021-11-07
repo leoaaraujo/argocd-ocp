@@ -4,24 +4,24 @@ metadata:
   annotations:
     machine.openshift.io/memoryMb: "16384"
     machine.openshift.io/vCPU: "4"
-  generation: 2
+  generation: 1
   labels:
-    machine.openshift.io/cluster-api-cluster: laraujo-${{ CLUSTER_ID }}
-  name: laraujo-${{ CLUSTER_ID }}-${{ ROLE_NAME }}
+    machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
+  name: laraujo-4p8m9-infra
   namespace: openshift-machine-api
 spec:
-  replicas: ${{ QTD_NODES }}
+  replicas: 2
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: laraujo-${{ CLUSTER_ID }}
-      machine.openshift.io/cluster-api-machineset: laraujo-${{ CLUSTER_ID }}-${{ ROLE_NAME }}
+      machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
+      machine.openshift.io/cluster-api-machineset: laraujo-4p8m9-infra
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: laraujo-${{ CLUSTER_ID }}
-        machine.openshift.io/cluster-api-machine-role: ${{ ROLE_NAME }}
-        machine.openshift.io/cluster-api-machine-type: ${{ ROLE_NAME }}
-        machine.openshift.io/cluster-api-machineset: laraujo-${{ CLUSTER_ID }}-${{ ROLE_NAME }}
+        machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
+        machine.openshift.io/cluster-api-machine-role: infra
+        machine.openshift.io/cluster-api-machine-type: infra
+        machine.openshift.io/cluster-api-machineset: laraujo-4p8m9-infra
     spec:
       metadata: {}
       providerSpec:
