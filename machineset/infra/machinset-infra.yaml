@@ -6,22 +6,22 @@ metadata:
     machine.openshift.io/vCPU: "4"
   generation: 2
   labels:
-    machine.openshift.io/cluster-api-cluster: laraujo-{{ CLUSTER_ID }}
-  name: laraujo-{{ CLUSTER_ID }}-{{ ROLE_NAME }}
+    machine.openshift.io/cluster-api-cluster: laraujo-{{.CLUSTER_ID}}
+  name: laraujo-{{.CLUSTER_ID}}-{{.ROLE_NAME}}
   namespace: openshift-machine-api
 spec:
-  replicas: {{ QTD_NODES }}
+  replicas: {{.QTD_NODES}}
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: laraujo-{{ CLUSTER_ID }}
-      machine.openshift.io/cluster-api-machineset: laraujo-{{ CLUSTER_ID }}-{{ ROLE_NAME }}
+      machine.openshift.io/cluster-api-cluster: laraujo-{{.CLUSTER_ID}}
+      machine.openshift.io/cluster-api-machineset: laraujo-{{.CLUSTER_ID}}-{{.ROLE_NAME}}
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: laraujo-{{ CLUSTER_ID }}
-        machine.openshift.io/cluster-api-machine-role: {{ ROLE_NAME }}
-        machine.openshift.io/cluster-api-machine-type: {{ ROLE_NAME }}
-        machine.openshift.io/cluster-api-machineset: laraujo-{{ CLUSTER_ID }}-{{ ROLE_NAME }}
+        machine.openshift.io/cluster-api-cluster: laraujo-{{.CLUSTER_ID}}
+        machine.openshift.io/cluster-api-machine-role: {{.ROLE_NAME}}
+        machine.openshift.io/cluster-api-machine-type: {{.ROLE_NAME}}
+        machine.openshift.io/cluster-api-machineset: laraujo-{{.CLUSTER_ID }}-{{.ROLE_NAME}}
     spec:
       metadata: {}
       providerSpec:
