@@ -1,16 +1,12 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  annotations:
-    machine.openshift.io/memoryMb: "16384"
-    machine.openshift.io/vCPU: "4"
-  generation: 2
   labels:
     machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
   name: laraujo-4p8m9-infra
   namespace: openshift-machine-api
 spec:
-  replicas: 2
+  replicas: 0
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
