@@ -4,13 +4,13 @@ metadata:
   annotations:
     machine.openshift.io/memoryMb: "16384"
     machine.openshift.io/vCPU: "4"
-  generation: 2
+  generation: 3
   labels:
     machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
   name: laraujo-4p8m9-wdev
   namespace: openshift-machine-api
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
