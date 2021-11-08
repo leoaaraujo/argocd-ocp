@@ -1,0 +1,14 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata:
+  name: laraujo-4p8m9-infra
+  namespace: openshift-machine-api
+spec:
+  template:
+    spec:
+      providerSpec:
+        value:
+          diskGiB: 70
+          memoryMiB: 8192
+          numCPUs: 4
+
