@@ -1,6 +1,8 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
+  labels:
+    machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
   name: laraujo-4p8m9-infra
   namespace: openshift-machine-api
 spec:
