@@ -17,7 +17,7 @@ spec:
         machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
         machine.openshift.io/cluster-api-machine-role: infra
         machine.openshift.io/cluster-api-machine-type: infra
-        machine.openshift.io/cluster-api-machineset: laraujo-4p8m9
+        machine.openshift.io/cluster-api-machineset: laraujo-4p8m9-infra
     spec:
       providerSpec:
         value:
