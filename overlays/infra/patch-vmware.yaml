@@ -1,0 +1,21 @@
+apiVersion: machine.openshift.io/v1beta1
+kind: MachineSet
+metadata: 
+  name: laraujo-bgnd9-infra
+  namespace: openshift-machine-api
+spec:
+  template:
+    spec:
+      metadata: {}
+      providerSpec:
+        value:
+          network:
+            devices:
+            - networkName: VM Network
+          template: laraujo-bgnd9-rhcos
+          workspace:
+            datacenter: Datacenter
+            datastore: datastore2
+            folder: /Datacenter/vm/Plataformas/Cloud/laraujo/OCP49
+            resourcePool: /Datacenter/host/cluster/Resources
+            server: vcsa.rhbr-lab.com

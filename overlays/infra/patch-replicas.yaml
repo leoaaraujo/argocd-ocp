@@ -4,11 +4,4 @@ metadata:
   name: laraujo-bgnd9-infra
   namespace: openshift-machine-api
 spec:
-  template:
-    spec:
-      providerSpec:
-        value:
-          diskGiB: 70
-          memoryMiB: 8192
-          numCPUs: 4
-
+  replicas: 2

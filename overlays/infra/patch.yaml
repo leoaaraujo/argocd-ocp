@@ -2,22 +2,22 @@ apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
   labels:
-    machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
-  name: laraujo-4p8m9-infra
+    machine.openshift.io/cluster-api-cluster: laraujo-bgnd9
+  name: laraujo-bgnd9-infra
   namespace: openshift-machine-api
 spec:
   replicas: 2
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
-      machine.openshift.io/cluster-api-machineset: laraujo-4p8m9-infra
+      machine.openshift.io/cluster-api-cluster: laraujo-bgnd9
+      machine.openshift.io/cluster-api-machineset: laraujo-bgnd9-infra
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: laraujo-4p8m9
+        machine.openshift.io/cluster-api-cluster: laraujo-bgnd9
         machine.openshift.io/cluster-api-machine-role: infra
         machine.openshift.io/cluster-api-machine-type: infra
-        machine.openshift.io/cluster-api-machineset: laraujo-4p8m9-infra
+        machine.openshift.io/cluster-api-machineset: laraujo-bgnd9-infra
     spec:
       providerSpec:
         value:

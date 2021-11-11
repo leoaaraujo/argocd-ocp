@@ -3,7 +3,7 @@ kind: MachineSet
 metadata:
   labels:
     machine.openshift.io/cluster-api-cluster: basename-id  
-  name: laraujo-4p8m9-infra
+  name: laraujo-bgnd9-infra
   namespace: openshift-machine-api
 spec:
   replicas: 0
@@ -35,7 +35,7 @@ spec:
           numCPUs: 1
           numCoresPerSocket: 2
           snapshot: ""
-          template: laraujo-4p8m9-rhcos
+          template: laraujo-bgnd9-rhcos
           userDataSecret:
             name: worker-user-data
           workspace:
