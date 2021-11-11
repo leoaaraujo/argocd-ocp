@@ -14,4 +14,4 @@ spec:
         machine.openshift.io/cluster-api-cluster: laraujo-bgnd9
         machine.openshift.io/cluster-api-machine-role: infra
         machine.openshift.io/cluster-api-machine-type: infra
-        machine.openshift.io/cluster-api-machineset: laraujo-bgnd9
+        machine.openshift.io/cluster-api-machineset: laraujo-bgnd9-infra
