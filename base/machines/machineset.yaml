@@ -19,7 +19,11 @@ spec:
         machine.openshift.io/cluster-api-machine-type: role
         machine.openshift.io/cluster-api-machineset: basename-id-role
     spec:
-      metadata: {}
+      metadata:
+        labels:
+          env: "infra"
+          type: "infra"
+          node-role.kubernetes.io/infra: ""      
       providerSpec:
         value:
           apiVersion: vsphereprovider.openshift.io/v1beta1
