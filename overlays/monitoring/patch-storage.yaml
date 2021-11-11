@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: cluster-monitoring-config
+ namespace: openshift-monitoring
+data:
+ config.yaml: |+
+   alertmanagerMain:
+     volumeClaimTemplate:
+       metadata:
+         name: pvc-alertmanager
+       spec:
+         storageClassName: thin
+         resources:
+           requests:
+             storage: 2Gi
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   prometheusK8s:
+     volumeClaimTemplate:
+       metadata:
+         name: pvc-prometheus
+       spec:
+         storageClassName: thin
+         resources:
+           requests:
+             storage: 10Gi
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   prometheusOperator:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   grafana:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   k8sPrometheusAdapter:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   kubeStateMetrics:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   telemeterClient:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   openshiftStateMetrics:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
+   thanosQuerier:
+     nodeSelector:
+       node-role.kubernetes.io/infra: ""
