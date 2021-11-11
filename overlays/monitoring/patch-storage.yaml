@@ -6,25 +6,9 @@ metadata:
 data:
  config.yaml: |+
    alertmanagerMain:
-     volumeClaimTemplate:
-       metadata:
-         name: pvc-alertmanager
-       spec:
-         storageClassName: thin
-         resources:
-           requests:
-             storage: 2Gi
      nodeSelector:
        node-role.kubernetes.io/infra: ""
    prometheusK8s:
-     volumeClaimTemplate:
-       metadata:
-         name: pvc-prometheus
-       spec:
-         storageClassName: thin
-         resources:
-           requests:
-             storage: 10Gi
      nodeSelector:
        node-role.kubernetes.io/infra: ""
    prometheusOperator:
