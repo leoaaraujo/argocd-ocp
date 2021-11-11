@@ -10,4 +10,4 @@ spec:
     nodeSelector:
       matchLabels:
         node-role.kubernetes.io/infra: ""  
-  replicas: 3
+  replicas: 2
