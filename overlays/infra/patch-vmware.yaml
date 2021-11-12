@@ -15,7 +15,7 @@ spec:
           template: laraujo-bgnd9-rhcos
           workspace:
             datacenter: Datacenter
-            datastore: datastore2
+            datastore: datastore1
             folder: /Datacenter/vm/Plataformas/Cloud/laraujo/OCP49
             resourcePool: /Datacenter/host/cluster/Resources
             server: vcsa.rhbr-lab.com
