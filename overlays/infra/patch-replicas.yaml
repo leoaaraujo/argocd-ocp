@@ -4,4 +4,4 @@ metadata:
   name: laraujo-bgnd9-infra
   namespace: openshift-machine-api
 spec:
-  replicas: 2
+  replicas: 3
