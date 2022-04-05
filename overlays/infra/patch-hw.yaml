@@ -10,5 +10,5 @@ spec:
         value:
           diskGiB: 70
           memoryMiB: 32768
-          numCPUs: 4
+          numCPUs: 8
 
