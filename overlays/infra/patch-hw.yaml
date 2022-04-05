@@ -9,6 +9,6 @@ spec:
       providerSpec:
         value:
           diskGiB: 70
-          memoryMiB: 24576
+          memoryMiB: 32768
           numCPUs: 4
 
