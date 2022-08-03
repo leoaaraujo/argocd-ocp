@@ -8,13 +8,7 @@ spec:
     spec:
       providerSpec:
         value:
-<<<<<<< HEAD
-          diskGiB: 70
-          memoryMiB: 32768
-          numCPUs: 8
-=======
           diskGiB: 120
           memoryMiB: 4096
           numCPUs: 4
->>>>>>> 26550aa (Add machineset managedcluster)
 
