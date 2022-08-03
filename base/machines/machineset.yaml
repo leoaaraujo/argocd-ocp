@@ -3,7 +3,7 @@ kind: MachineSet
 metadata:
   labels:
     machine.openshift.io/cluster-api-cluster: basename-id  
-  name: laraujo-bgnd9-infra
+  name: managedcluster-8mlqt-gitops
   namespace: openshift-machine-api
 spec:
   replicas: 0
@@ -21,30 +21,30 @@ spec:
     spec:
       metadata:
         labels:
-          env: "infra"
-          type: "infra"
+          env: "value"
+          type: "value"
           node-role.kubernetes.io/infra: ""      
       providerSpec:
         value:
           apiVersion: vsphereprovider.openshift.io/v1beta1
           credentialsSecret:
             name: vsphere-cloud-credentials
-          diskGiB: 60
+          diskGiB: 
           kind: VSphereMachineProviderSpec
-          memoryMiB: 1024
+          memoryMiB: mem
           metadata:
           network:
             devices:
             - networkName: VM Network
-          numCPUs: 1
+          numCPUs: cpu
           numCoresPerSocket: 2
           snapshot: ""
-          template: laraujo-bgnd9-rhcos
+          template: basename-template
           userDataSecret:
             name: worker-user-data
           workspace:
-            datacenter: Datacenter
-            datastore: datastore1
-            folder: /Datacenter/vm/Plataformas/Cloud/laraujo/OCP49
+            datacenter: basename-datacenter
+            datastore: basename-datastore
+            folder: basename-folder
             resourcePool: /Datacenter/host/cluster/Resources
             server: vcsa.rhbr-lab.com

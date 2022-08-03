@@ -11,7 +11,7 @@ spec:
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: managedcluster-8mlqt-gitops
+        machine.openshift.io/cluster-api-cluster: managedcluster-8mlqt
         machine.openshift.io/cluster-api-machine-role: gitops
         machine.openshift.io/cluster-api-machine-type: gitops
         machine.openshift.io/cluster-api-machineset: managedcluster-8mlqt-gitops

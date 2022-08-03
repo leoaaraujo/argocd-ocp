@@ -6,7 +6,11 @@ metadata:
 spec:
   template:
     spec:
-      metadata: {}
+      metadata:
+        labels:
+          env: "gitops"
+          type: "gitops"
+          node-role.kubernetes.io/gitops: ""
       providerSpec:
         value:
           network:
