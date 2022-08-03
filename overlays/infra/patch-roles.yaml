@@ -1,17 +1,17 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  name: laraujo-bgnd9-infra
+  name: managedcluster-8mlqt-gitops
   namespace: openshift-machine-api
 spec:
   selector:
     matchLabels:
-      machine.openshift.io/cluster-api-cluster: laraujo-bgnd9
-      machine.openshift.io/cluster-api-machineset: laraujo-bgnd9-infra
+      machine.openshift.io/cluster-api-cluster: managedcluster-8mlqt
+      machine.openshift.io/cluster-api-machineset: managedcluster-8mlqt-gitops
   template:
     metadata:
       labels:
-        machine.openshift.io/cluster-api-cluster: laraujo-bgnd9
+        machine.openshift.io/cluster-api-cluster: managedcluster-8mlqt-gitops
         machine.openshift.io/cluster-api-machine-role: infra
         machine.openshift.io/cluster-api-machine-type: infra
-        machine.openshift.io/cluster-api-machineset: laraujo-bgnd9-infra
+        machine.openshift.io/cluster-api-machineset: managedcluster-8mlqt-gitops

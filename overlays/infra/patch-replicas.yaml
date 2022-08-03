@@ -1,7 +1,7 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  name: laraujo-bgnd9-infra
+  name: managedcluster-8mlqt-gitops
   namespace: openshift-machine-api
 spec:
-  replicas: 3
+  replicas: 1

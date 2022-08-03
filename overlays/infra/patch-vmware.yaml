@@ -1,7 +1,7 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata: 
-  name: laraujo-bgnd9-infra
+  name: managedcluster-8mlqt-gitops
   namespace: openshift-machine-api
 spec:
   template:
@@ -12,10 +12,10 @@ spec:
           network:
             devices:
             - networkName: VM Network
-          template: laraujo-bgnd9-rhcos
+          template: managedcluster-8mlqt-rhcos
           workspace:
             datacenter: Datacenter
             datastore: datastore1
-            folder: /Datacenter/vm/Plataformas/Cloud/laraujo/OCP49
+            folder: /Datacenter/vm/Plataformas/ManagedCluster
             resourcePool: /Datacenter/host/cluster/Resources
             server: vcsa.rhbr-lab.com
