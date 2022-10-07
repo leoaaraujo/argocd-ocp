@@ -42,3 +42,9 @@
 └── README.md
 
 ```
+
+&nbsp;
+
+
+![](grafana-dashboard/argocd_dashboard.png)
+
